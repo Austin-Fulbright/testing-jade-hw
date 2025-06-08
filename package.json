@@ -1,7 +1,11 @@
 {
 	"name": "testing-jade-hw",
-	"version": "1.0.0",
-	"description": "jade impl in typescript",
+	"version": "1.0.0-test.0",
+	"description": "Hardware-testing fork of jadets (NOT for production)",
+	"keywords": ["testing"],
+	"publishConfig": {
+		"tag": "test"
+	},
 	"main": "./dist/index.js",
 	"module": "./dist/index.mjs",
 	"types": "./dist/index.d.ts",
