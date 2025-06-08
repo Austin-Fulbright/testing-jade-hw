@@ -1,6 +1,6 @@
 {
 	"name": "testing-jade-hw",
-	"version": "1.0.0-test.0",
+	"version": "1.0.0-test.2",
 	"description": "Hardware-testing fork of jadets (NOT for production)",
 	"keywords": ["testing"],
 	"publishConfig": {

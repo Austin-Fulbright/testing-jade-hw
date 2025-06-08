@@ -139,6 +139,7 @@ export class Jade implements IJade {
 		target: MultisigDescriptor
 	): Promise<string|undefined> {
 		const summaries = await this.getRegisteredMultisigs();
+		console.log("summaries");
 
 		for (const [name, sum] of Object.entries(summaries)) {
 			if (
@@ -152,6 +153,8 @@ export class Jade implements IJade {
 
 			const full = await this.getRegisteredMultisig(name, false);
 			const desc = full.descriptor;
+			console.log("testing wallet: ", full);
+			console.log("target wallet: ", target);
 
 			const normalize = (o: any) =>
 			new Uint8Array(Object.values(o.fingerprint as Record<string, number>));
@@ -176,6 +179,7 @@ export class Jade implements IJade {
 			});
 
 			if (match) {
+				console.log("found wallet: ", name);
 				return name;
 			}
 		}
